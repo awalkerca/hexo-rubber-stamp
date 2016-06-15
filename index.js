@@ -45,8 +45,7 @@ hexo.extend.tag.register('rubber_stamp', function(args, content){
     var includesTag = activeTags().indexOf(tag) >= 0;
 
     var targetTag = includesTag ? tag : defaultTag;
-
-    var url = `/tags/${targetTag}.html`;
+    var url = `/tags/${targetTag.replace(' ', '-')}/`;
 
     if (text.length > 14) {
         classes.push('double-line');
