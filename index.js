@@ -28,7 +28,7 @@ var activeTags = function () {
     return tags;
 }
 
-var defaultTag = 'travel';
+var defaultUrl = '/categories/Travel';
 
 hexo.extend.tag.register('rubber_stamp', function(args, content){
 
