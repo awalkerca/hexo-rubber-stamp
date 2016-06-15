@@ -78,7 +78,7 @@ hexo.extend.tag.register('rubber_stamp', function(args, content){
                 </a>`;
         break;
     case 'circle':
-        output = `<a class='${classes.join(' ')}' href-'${url}'>
+        output = `<a class='${classes.join(' ')}' href='${url}'>
                     <svg width='150px' height='150px' preserveAspectRatio='xMinYMin'>
                         <defs>
                             <path id='textPath' stroke='1px solid #ddd' d='M25,75a50,50 0 0,1 100,0a50,50 0 0,1 -100,0' />
