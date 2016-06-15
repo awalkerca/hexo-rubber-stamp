@@ -34,7 +34,7 @@ hexo.extend.tag.register('rubber_stamp', function(args, content){
 
     var text = args[0];
     var year = args[1];
-    var tag = args[2] || text;
+    var tag = args[2] || text.toLowerCase();
     var shape = args[3] || 'rectangle';
     var subYear = year.split('').slice(2).join('');
 
