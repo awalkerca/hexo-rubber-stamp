@@ -41,11 +41,15 @@ hexo.extend.tag.register('rubber_stamp', function(args, content){
 
     var classes = ['rubber-stamp'];
     var output = '';
+    var url;
 
     var includesTag = activeTags().indexOf(tag) >= 0;
 
-    var targetTag = includesTag ? tag : defaultTag;
-    var url = `/tags/${targetTag.replace(' ', '-')}/`;
+    if (includesTag) {
+        url = `/tags/${tag.replace(' ', '-')}/`;
+    } else {
+        url = defaultUrl;
+    }
 
     if (text.length > 14) {
         classes.push('double-line');
